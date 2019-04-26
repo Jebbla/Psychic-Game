@@ -1,0 +1,31 @@
+
+body {
+    background: #41b9e7; 
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 3px rgb(0, 13, 29);
+    font-family: 'Open Sans', sans-serif;    
+  }
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    text-shadow: 1px 1px 2px rgb(0, 13, 29);    
+}
+
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif, serif;
+    font-size: 18px;    
+}
+
+#game {
+	font-size: 24px;
+	color:black;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 170px;
+}
+
+.title {
+	text-align: center;
+}
