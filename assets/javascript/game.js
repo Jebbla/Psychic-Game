@@ -1,4 +1,5 @@
-var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+$(document).ready(function(){
+	var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 	var wins = 0;
 	var losses = 0;
 	var guesses_left = 10;
@@ -7,7 +8,12 @@ var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", 
 
 	
 	var computerPick;
-
+	//target our html section
+	var guessesLefthtml= $(".guesses-left");
+	var guessesMadehtml= $(".guesses-made");
+	//actually update the html
+	guessesLefthtml.text(guesses_left);
+	guessesLefthtml.text(guesses_made);
 	function pickRandomLetter() { 
 		var greeting = 'hello'
 		computerPick = letters[Math.floor(Math.random()*letters.length)];
@@ -54,7 +60,10 @@ var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", 
 				
 				if(guesses_made.indexOf(playerGuess) < 0){
 					guesses_left -=1;
+					guessesLefthtml.text(guesses_left);
 					guesses_made.push(playerGuess);
+					guessesLefthtml.text(guesses_made);
+
 				}
 				
 				
@@ -69,3 +78,4 @@ var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", 
 			}
 
 		}
+})
