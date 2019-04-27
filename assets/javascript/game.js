@@ -1,4 +1,4 @@
-var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",];
+var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 	var wins = 0;
 	var losses = 0;
 	var guesses_left = 10;
@@ -8,13 +8,14 @@ var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", 
 	
 	var computerPick;
 
-	function computerThinks() { 
-
+	function pickRandomLetter() { 
+		var greeting = 'hello'
 		computerPick = letters[Math.floor(Math.random()*letters.length)];
 
 		}
 
-	computerThinks();
+
+	pickRandomLetter();
 
 	console.log(computerPick);
 
@@ -32,7 +33,7 @@ var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", 
 	function resetGame() {
 		guesses_left = 10;
 		guesses_made = [];
-		computerThinks();
+		pickRandomLetter();
 	}
 
 	document.onkeyup = function(event) {
@@ -53,7 +54,7 @@ var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", 
 				
 				if(guesses_made.indexOf(playerGuess) < 0){
 					guesses_left -=1;
-				guesses_made.push(playerGuess);
+					guesses_made.push(playerGuess);
 				}
 				
 				
@@ -67,4 +68,4 @@ var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", 
 				resetGame();
 			}
 
-			
+		}
