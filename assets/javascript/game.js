@@ -11,9 +11,14 @@ $(document).ready(function(){
 	//target our html section
 	var guessesLefthtml= $(".guesses-left");
 	var guessesMadehtml= $(".guesses-made");
+	var losseshtml= $('.losses');
+	var winshtml = $('.wins');
 	//actually update the html
 	guessesLefthtml.text(guesses_left);
 	guessesLefthtml.text(guesses_made);
+	losseshtml.text(losses);
+	winshtml.text(wins);
+	
 	function pickRandomLetter() { 
 		var greeting = 'hello'
 		computerPick = letters[Math.floor(Math.random()*letters.length)];
